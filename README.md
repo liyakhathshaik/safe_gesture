@@ -85,6 +85,3 @@ It continuously polls Firebase and:
 5. **Immediate police action** is dispatched.
 
 ---
-
-**Japanese Word of the Day**:  
-**きけん (kiken)** – *Danger / Hazard*
