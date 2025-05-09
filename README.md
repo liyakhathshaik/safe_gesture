@@ -1,58 +1,90 @@
-﻿# Gesture_Recognisition
- ❗ PROBLEM STATEMENT
-Despite advances in public surveillance and emergency services, women still face critical safety challenges:
+# 🙌 Gesture Recognition for Women’s Safety
 
-🚶‍♀️ Vulnerability in Public Spaces: Harassment and assault often go unnoticed or unreported.
+## ❗ Problem Statement
 
-📵 Delayed Response: Victims may be unable to call for help in time.
+Despite advances in surveillance and emergency services, women continue to face serious safety challenges:
 
-🔍 Lack of Proactive Detection: Most CCTV systems record passively; they don’t “understand” when something is wrong.
+- 🚶‍♀️ **Vulnerability in Public Spaces**  
+  Harassment and assault often go unnoticed or unreported.
 
-🛡️ Insufficient Integration: Alerts, first responders, and nearby safe zones aren’t always connected.
+- 📵 **Delayed Response**  
+  Victims may be unable to call for help in time.
 
-⏳ Lost Minutes Matter: Every second’s delay in detecting and notifying law enforcement or bystanders dramatically increases risk.
+- 🔍 **Lack of Proactive Detection**  
+  Most CCTV systems only record events — they don’t understand when something is wrong.
 
+- 🛡️ **Insufficient Integration**  
+  Alerts, first responders, and nearby safe zones are often not connected in real time.
 
-Developed an AI-powered surveillance system utilizing OpenCV and MediaPipe to detect SOS gestures through widespread camera networks. Integrated geolocation data transmission to Firebase Cloud, enabling real-time alerts to the nearest police stations. Designed a desktop application with Electron for law enforcement, featuring live incident imagery, geolocation details, and emergency notifications, operating seamlessly in the background.
-here is desktop application link: https://github.com/liyakhathshaik/Desktop_application_women_safety
-here is recognisation link: https://github.com/liyakhathshaik/Gesture_Recognision
-How It Works & What We Use
-Video Capture
+- ⏳ **Lost Minutes Matter**  
+  Every second’s delay in detecting and notifying responders dramatically increases risk.
 
-Fixed-location cameras stream video frames to our central server.
+---
 
-Frame Extraction
+## 💡 Our Solution: AI-Powered SOS Gesture Recognition System
 
-On the server, a process continuously pulls frames from each camera feed.
+An intelligent surveillance system that detects emergency gestures using AI and instantly alerts law enforcement.
 
-Gesture Detection
+---
 
-We run a Python script using OpenCV and MediaPipe to detect pre-defined SOS hand signs in each frame.
+## 🔗 Repositories
 
-Event Packaging
+- 👉 **Gesture Recognition Module**: [Gesture_Recognision](https://github.com/liyakhathshaik/Gesture_Recognision)  
+- 👉 **Desktop Application (Police Alert System)**: [Desktop_application_women_safety](https://github.com/liyakhathshaik/Desktop_application_women_safety)
 
-When a gesture is detected, we extract the relevant frame(s), attach the camera ID and timestamp, and bundle them into an “event” packet.
+---
 
-Cloud Upload
+## 🛠️ How It Works
 
-The event packet is uploaded to a secure Firebase Cloud Storage bucket that corresponds to the nearest police station.
+### 🎥 Video Capture
+Fixed-location CCTV cameras continuously stream video to a central server.
 
-Desktop Alert App
+### 🖼️ Frame Extraction
+Each video stream is processed to extract individual frames in real-time.
 
-A desktop application built with Electron polls the Firebase bucket.
+### ✋ Gesture Detection
+Python scripts using **OpenCV** and **MediaPipe** analyze each frame.  
+If an SOS gesture is detected, it is flagged for further action.
 
-When a new event appears, it downloads the image, displays it, and sounds an alarm.
+### 📦 Event Packaging
+The system packages:
+- The detected frame
+- Timestamp
+- Camera ID  
+Into a secure **event packet**.
 
-Police Station Response
+### ☁️ Cloud Upload
+Event packets are uploaded to **Firebase Cloud Storage**, tagged to the nearest police station’s bucket.
 
-Officers see the live image and location in the desktop app and can dispatch help immediately.
+### 💻 Desktop Alert App
+A desktop app (built using **Electron**) runs at police stations.  
+It continuously polls Firebase and:
+- Downloads new events
+- Displays the live image and location
+- Sounds a real-time alarm to alert officers
 
-Tech Used
+---
 
-OpenCV & MediaPipe for gesture recognition
+## 🧰 Technologies Used
 
-Python for server-side processing
+| Component              | Tech Used              |
+|------------------------|------------------------|
+| Gesture Recognition    | OpenCV, MediaPipe      |
+| Server Processing      | Python                 |
+| Cloud Delivery         | Firebase Cloud Storage |
+| Desktop Notification   | Electron.js            |
 
-Firebase Cloud Storage for secure image delivery
+---
 
-Electron for the desktop alert application
+## 🚓 Response Flow
+
+1. **Camera detects SOS gesture** via AI.  
+2. **Server processes the event** and uploads to Firebase.  
+3. **Desktop app receives alert** at the police station.  
+4. **Live image and location are shown**, and an alarm sounds.  
+5. **Immediate police action** is dispatched.
+
+---
+
+**Japanese Word of the Day**:  
+**きけん (kiken)** – *Danger / Hazard*
