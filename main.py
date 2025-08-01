@@ -29,7 +29,7 @@ def detect_gesture_and_upload():
 
     # Firebase configuration
     firebaseConfig = {
-        "apiKey": "AIzaSyDUdttY89xF6y62aXAxWS0NmsZ35kzJPtE",
+        "apiKey": "YOUR API KEY",
         "authDomain": "guardian-gesture.firebaseapp.com",
         "projectId": "guardian-gesture",
         "storageBucket": "guardian-gesture.appspot.com",
